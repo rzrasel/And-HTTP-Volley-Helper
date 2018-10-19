@@ -21,7 +21,7 @@ Maven Repositories
 ```maven
 allprojects {
     repositories {
-        maven { url 'https://dl.bintray.com/rzrasel/android-power-pack/' }
+        maven { url 'https://dl.bintray.com/rzrasel/android-http-volley-helper/' }
     }
 }
 ```
