@@ -1,6 +1,7 @@
 package com.rz.usagesexampl;
 
 import com.google.gson.annotations.SerializedName;
+import com.rz.httpvolleyhelper.FieldName;
 
 public class ModelHTTPVolley {
     @SerializedName("id")

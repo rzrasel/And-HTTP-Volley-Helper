@@ -1,4 +1,4 @@
-package com.rz.usagesexampl;
+package com.rz.httpvolleyhelper;
 
 public @interface FieldName {
     /**
