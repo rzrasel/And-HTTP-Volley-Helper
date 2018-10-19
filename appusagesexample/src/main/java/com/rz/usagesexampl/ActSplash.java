@@ -12,6 +12,7 @@ import com.rz.httpvolleyhelper.HTTPVolleyParser;
 import com.rz.httpvolleyhelper.HTTPVolleyRequest;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -103,7 +104,8 @@ public class ActSplash extends AppCompatActivity {
         setContentView(R.layout.act_splash);
         activity = this;
         context = this;
-        onHTTPVolleyParser();
+        onDynamicMethodVar();
+        //onHTTPVolleyParser();
         //startActivity(new Intent(context, ActHTTPVolleyHelper.class));
         List<String> serializedNameList = getAllAnnotation(ModelHTTPVolley.class);
         for (String item : serializedNameList) {
@@ -160,5 +162,74 @@ public class ActSplash extends AppCompatActivity {
                     }
                 })
                 .onExecute(HTTPVolleyRequest.HTTPMethod.GET);
+    }
+
+    private void onDynamicMethodVar() {
+        onExtended(ModelHTTPVolley.class);
+    }
+
+    private void onExtended(Class argClass) {
+        //https://stackoverflow.com/questions/13298823/get-variable-by-name-from-a-string
+        //https://coderanch.com/t/510554/java/variable-string-variable
+        //Class aClass = ModelHTTPVolley.class;
+        /*FooClass fooClass = new FooClass();
+        Method mFoo1 = fooClass.getClass().getMethod("getFoo" + increment + "()");
+        mFoo1.invoke(fooClass);*/
+        /*try {
+            Object object = argClass.newInstance();
+            Method method = argClass.getMethod("sayHi()");
+            //object = argClass.cast(object);
+            method.invoke(argClass.cast(object));
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }*/
+        try {
+            String methodName = "";
+            Object object = argClass.newInstance();
+            /*Method method = argClass.getMethod("sayHi()");
+            //object = argClass.cast(object);
+            method.invoke(argClass.cast(object));*/
+            System.out.println(object.getClass());
+            methodName = "sayHi";
+            Method setNameMethod = object.getClass().getMethod(methodName);
+            setNameMethod.invoke(object);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+            //https://stackoverflow.com/questions/160970/how-do-i-invoke-a-java-method-when-given-the-method-name-as-a-string
+        }
+        try {
+            /*ModelHTTPVolley modelHTTPVolley = new ModelHTTPVolley();
+            Field field = aClass.getField("testVar");
+            String str1 = "";
+            System.out.println(field.get(modelHTTPVolley));*/
+            //Class<?> theClass = Class.forName(theType);
+            //Object obj = theClass.cast(something);
+            Object object = argClass.newInstance();
+            //MethodDynamic methodDynamic = new MethodDynamic();
+            Field field = argClass.getField("testVar");
+            //field.set(methodDynamic, "new value");
+            System.out.println(field.get(object));
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public class MethodDynamic {
     }
 }

@@ -127,8 +127,8 @@ public class HTTPVolleyParser {
     public interface EventListenerHandler {
         public void onSuccess(String argResponseData);
 
-        //public void onSuccess(ArrayList<?> argModelDataList);
-        public void onSuccess(ArrayList<Object> argModelDataList);
+        public void onSuccess(ArrayList<?> argModelDataList);
+        //public void onSuccess(ArrayList<Object> argModelDataList);
 
         public void onError(VolleyError argError);
 
