@@ -1,1 +1,1 @@
-include ':app', ':libraryhttpvolleyhelper', ':mylibrary'
+include ':appusagesexample', ':libraryhttpvolleyhelper'
