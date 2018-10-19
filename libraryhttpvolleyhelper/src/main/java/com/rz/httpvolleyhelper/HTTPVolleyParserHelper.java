@@ -5,7 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-class HelperHTTPVolleyParser<T> {
+class HTTPVolleyParserHelper<T> {
     protected static <T> ArrayList<T> getModel(Class<T> argClass) {
         ArrayList<T> arrayList = new ArrayList<T>();
         return arrayList;

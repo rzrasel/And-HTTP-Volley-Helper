@@ -90,7 +90,7 @@ public class HTTPVolleyParser {
                         System.out.println("DEBUG_LOG_PRINT (HTTPVolleyParser): Response " + argResponse);
                         Gson gson = new Gson();
                         if (modelClass != null) {
-                            Type typeToken = HelperHTTPVolleyParser.getTypeToken(modelClass);
+                            Type typeToken = HTTPVolleyParserHelper.getTypeToken(modelClass);
                             //ArrayList<T> modelDataList = new GsonBuilder().create().fromJson(argResponse.toString(), typeToken);
                             ArrayList<Object> modelDataList = new GsonBuilder().create().fromJson(argResponse.toString(), typeToken);
                             //System.out.println("DEBUG_LOG_PRINT (HTTPVolleyParser): Response size " + modelDataList.size());
@@ -127,7 +127,8 @@ public class HTTPVolleyParser {
     public interface EventListenerHandler {
         public void onSuccess(String argResponseData);
 
-        public void onSuccess(ArrayList<?> argModelDataList);
+        //public void onSuccess(ArrayList<?> argModelDataList);
+        public void onSuccess(ArrayList<Object> argModelDataList);
 
         public void onError(VolleyError argError);
 
