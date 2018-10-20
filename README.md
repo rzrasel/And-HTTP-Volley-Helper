@@ -46,8 +46,9 @@ Usage
 In your Activity
 
 Adapter Helper
+
 | Command | Description |
-| --- | --- |
+| ------- | ----------- |
 | Field Type | Enum - imageview, textview |
 | Field ID | String - field id of the textview, imageview |
 | Model Method | Method name - name of the data model like: getName() function is written as getName |
