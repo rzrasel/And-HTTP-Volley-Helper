@@ -49,8 +49,9 @@ Adapter Helper
 
 | Command | Description |
 | ------- | ----------- |
-| Field Type | Enum - imageview, textview |
-| Field ID | String - field id of the textview, imageview |
+| Field Type | Enum - image view, text view |
+| Field Data Type | Enum - is string, string url, raw image id, bitmap, drawable |
+| Field ID | String - field id of the text view, image view |
 | Model Method | Method name - name of the data model like: getName() function is written as getName |
 | Have Call Back | - return: view + field value |
 | command | description |
