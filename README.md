@@ -30,17 +30,26 @@ Download the latest JAR or grab via Maven:
 ```xml
 <dependency>
     <groupId>com.adept.archery</groupId>
-    <artifactId>and-http-volley-helper</artifactId>
+    <artifactId>and-http-volley</artifactId>
     <version>100.00.01</version>
     <type>pom</type>
 </dependency>
 ```
 or Gradle:
 ```groovy
-implementation 'com.adept.archery:and-http-volley-helper:100.00.01'
+implementation 'com.adept.archery:and-http-volley:100.00.01'
 ```
 
 Usage
 -----
 
 In your Activity
+
+Adapter Helper
+| Command | Description |
+| --- | --- |
+| Field Type | Enum - imageview, textview |
+| Field ID | String - field id of the textview, imageview |
+| Model Method | Method name - name of the data model like: getName() function is written as getName |
+| Have Call Back | - return: view + field value |
+| command | description |
