@@ -134,7 +134,7 @@ public class ActSplash extends AppCompatActivity {
 
     public void onHTTPVolleyParser() {
         HTTPVolleyParser httpVolleyParser = new HTTPVolleyParser(context);
-        HashMap<String, String> headerParams = null;
+        HashMap<String, String> headerParams = new HashMap<>();
         headerParams.put("Authorization", "Token " + "ApiAuthToken");
         httpVolleyParser.withRUL("url")
                 .withModel(ModelHTTPVolley.class)
