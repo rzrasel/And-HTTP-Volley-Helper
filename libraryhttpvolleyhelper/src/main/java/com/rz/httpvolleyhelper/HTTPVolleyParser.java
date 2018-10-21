@@ -10,7 +10,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class HTTPVolleyParser {
+public class HTTPVolleyParser<T> {
     @CodeMarker("Variable Declaration Start")
     private Context context;
     private HTTPVolleyRequest httpVolleyRequest = null;
@@ -91,8 +91,10 @@ public class HTTPVolleyParser {
                         Gson gson = new Gson();
                         if (modelClass != null) {
                             Type typeToken = HTTPVolleyParserHelper.getTypeToken(modelClass);
-                            //ArrayList<T> modelDataList = new GsonBuilder().create().fromJson(argResponse.toString(), typeToken);
-                            ArrayList<Object> modelDataList = new GsonBuilder().create().fromJson(argResponse.toString(), typeToken);
+                            //ArrayList<T> modelDataList = HTTPVolleyParserHelper.getModel(modelClass);
+                            ArrayList<?> modelDataList = HTTPVolleyParserHelper.getModel(modelClass);
+                            modelDataList = new GsonBuilder().create().fromJson(argResponse.toString(), typeToken);
+                            //ArrayList<Object> modelDataList = new GsonBuilder().create().fromJson(argResponse.toString(), typeToken);
                             //System.out.println("DEBUG_LOG_PRINT (HTTPVolleyParser): Response size " + modelDataList.size());
                             //onCachingTask(cacheKey, modelDataList);
                             if (eventListener != null) {
@@ -164,3 +166,4 @@ httpVolleyParser.withRUL(AppConstant.Server.URLS.DISEASE)
         .onExecute(HTTPVolleyParser.HTTPMethod.GET);
 */
 //https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/widget/TextView.java
+//https://coderanch.com/t/383648/java/java-reflection-element-type-List

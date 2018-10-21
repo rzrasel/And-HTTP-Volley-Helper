@@ -6,6 +6,11 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 class HTTPVolleyParserHelper<T> {
+    public static <T> ArrayList<T> getModel() {
+        ArrayList<T> arrayList = new ArrayList<T>();
+        return arrayList;
+    }
+
     protected static <T> ArrayList<T> getModel(Class<T> argClass) {
         ArrayList<T> arrayList = new ArrayList<T>();
         return arrayList;
