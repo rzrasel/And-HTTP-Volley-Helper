@@ -20,10 +20,16 @@ class HTTPVolleyParserHelper<T> {
         ArrayList<T> arrayList = new ArrayList<T>();
     }
 
+    protected static <T> Type getTypeToken() {
+        return new TypeToken<ArrayList<T>>() {
+        }.getType();
+    }
+
     protected static <T> Type getTypeToken(Class<T> argTypeToken) {
         /*Type typeToken = new TypeToken<ArrayList<ModelUsual>>() {
         }.getType();*/
-        return new TypeToken<ArrayList<T>>() {
-        }.getType();
+        /*return new TypeToken<ArrayList<T>>() {
+        }.getType();*/
+        return TypeToken.getParameterized(ArrayList.class, argTypeToken).getType();
     }
 }

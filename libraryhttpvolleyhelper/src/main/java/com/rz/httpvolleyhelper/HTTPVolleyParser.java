@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class HTTPVolleyParser<T> {
-    @CodeMarker("Variable Declaration Start")
+    //@CodeMarker("Variable Declaration Start")
     private Context context;
     private HTTPVolleyRequest httpVolleyRequest = null;
     private String httpRequestURL;
@@ -90,11 +90,14 @@ public class HTTPVolleyParser<T> {
                         System.out.println("DEBUG_LOG_PRINT (HTTPVolleyParser): Response " + argResponse);
                         Gson gson = new Gson();
                         if (modelClass != null) {
+                            /*Type typeToken = new TypeToken<ArrayList<ModelUsual>>() {
+                            }.getType();*/
                             Type typeToken = HTTPVolleyParserHelper.getTypeToken(modelClass);
+                            //Type typeToken = HTTPVolleyParserHelper.getTypeToken();
                             //ArrayList<T> modelDataList = HTTPVolleyParserHelper.getModel(modelClass);
                             ArrayList<?> modelDataList = HTTPVolleyParserHelper.getModel(modelClass);
                             modelDataList = new GsonBuilder().create().fromJson(argResponse.toString(), typeToken);
-                            //ArrayList<Object> modelDataList = new GsonBuilder().create().fromJson(argResponse.toString(), typeToken);
+                            //ArrayList<ModelUsual> modelDataList = new GsonBuilder().create().fromJson(argResponse.toString(), typeToken);
                             //System.out.println("DEBUG_LOG_PRINT (HTTPVolleyParser): Response size " + modelDataList.size());
                             //onCachingTask(cacheKey, modelDataList);
                             if (eventListener != null) {
@@ -131,6 +134,7 @@ public class HTTPVolleyParser<T> {
 
         public void onSuccess(ArrayList<?> argModelDataList);
         //public void onSuccess(ArrayList<Object> argModelDataList);
+        //public void onSuccess(ArrayList<ModelUsual> argModelDataList);
 
         public void onError(VolleyError argError);
 
