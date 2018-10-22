@@ -57,6 +57,8 @@ Adapter Helper
 | command | description |
 
 
+https://stackoverflow.com/questions/21674091/how-to-add-stacktrace-or-debug-option-when-building-android-studio-project
 Rz Rasel:And-HTTP-Volley-Helper developer$ gradlew install
 bash: gradlew: command not found
 Rz Rasel:And-HTTP-Volley-Helper developer$
+./gradlew assembleDebug --scan
