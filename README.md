@@ -55,3 +55,8 @@ Adapter Helper
 | Model Method | Method name - name of the data model like: getName() function is written as getName |
 | Have Call Back | - return: view + field value |
 | command | description |
+
+
+Rz Rasel:And-HTTP-Volley-Helper developer$ gradlew install
+bash: gradlew: command not found
+Rz Rasel:And-HTTP-Volley-Helper developer$
