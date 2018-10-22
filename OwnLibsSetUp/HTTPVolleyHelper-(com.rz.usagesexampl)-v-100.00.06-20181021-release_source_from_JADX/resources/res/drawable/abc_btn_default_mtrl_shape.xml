@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<inset xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:insetLeft="@c0263d/abc_button_inset_horizontal_material" android:insetRight="@c0263d/abc_button_inset_horizontal_material" android:insetTop="@c0263d/abc_button_inset_vertical_material" android:insetBottom="@c0263d/abc_button_inset_vertical_material">
-    <shape android:shape="rectangle">
-        <corners android:radius="@c0263d/abc_control_corner_material"/>
-        <solid android:color="@android:color/white"/>
-        <padding android:left="@c0263d/abc_button_padding_horizontal_material" android:top="@c0263d/abc_button_padding_vertical_material" android:right="@c0263d/abc_button_padding_horizontal_material" android:bottom="@c0263d/abc_button_padding_vertical_material"/>
-    </shape>
-</inset>
