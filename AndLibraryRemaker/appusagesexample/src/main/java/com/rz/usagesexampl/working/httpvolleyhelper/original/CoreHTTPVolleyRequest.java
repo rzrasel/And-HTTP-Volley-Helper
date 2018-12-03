@@ -49,6 +49,7 @@ class CoreHTTPVolleyRequest {
     private String methodName = "methodName-var";
 
     protected synchronized static CoreHTTPVolleyRequest getInstance(Context argContext) {
+        String staticMethodName = "CoreHTTPVolleyRequest getInstance(Context argContext)";
         if (instance == null) {
             instance = new CoreHTTPVolleyRequest(argContext);
         }
@@ -56,6 +57,7 @@ class CoreHTTPVolleyRequest {
     }
 
     protected CoreHTTPVolleyRequest(Context argContext) {
+        methodName = "CoreHTTPVolleyRequest(Context argContext)";
         context = argContext;
         urlRequestHeaders = new HashMap<>();
         urlRequestParameters = new HashMap<>();
@@ -71,6 +73,7 @@ class CoreHTTPVolleyRequest {
     }
 
     private RequestQueue getRequestQueue() {
+        methodName = "RequestQueue getRequestQueue()";
         if (volleyRequest == null) {
             Cache cache = new DiskBasedCache(context.getCacheDir(), 10 * 1024 * 1024);
             Network network = new BasicNetwork(new HurlStack());
@@ -82,40 +85,47 @@ class CoreHTTPVolleyRequest {
     }
 
     protected CoreHTTPVolleyRequest setEventListener(HTTPVolleyRequest.EventListenerHandler argEventListener) {
+        methodName = "CoreHTTPVolleyRequest setEventListener(HTTPVolleyRequest.EventListenerHandler argEventListener)";
         eventListener = argEventListener;
         return this;
     }
 
     protected CoreHTTPVolleyRequest setURL(String argHTTPRequestURL) {
+        methodName = "CoreHTTPVolleyRequest setURL(String argHTTPRequestURL)";
         httpRequestURL = argHTTPRequestURL;
         return this;
     }
 
     protected CoreHTTPVolleyRequest withHeaderParameters(HashMap<String, String> argURLRequestHeaders) {
+        methodName = "CoreHTTPVolleyRequest withHeaderParameters(HashMap<String, String> argURLRequestHeaders)";
         urlRequestHeaders = argURLRequestHeaders;
         //isUseHeaderParameterKeyValue = false;
         return this;
     }
 
     protected CoreHTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters) {
+        methodName = "CoreHTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters)";
         urlRequestParameters = argURLRequestParameters;
         //isUseRequestParameterKeyValue = false;
         return this;
     }
 
     protected CoreHTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue) {
+        methodName = "CoreHTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue)";
         urlRequestHeaders.put(argParameterKey, argParameterValue);
         //isUseHeaderParameterKeyValue = true;
         return this;
     }
 
     protected CoreHTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue) {
+        methodName = "CoreHTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue)";
         urlRequestParameters.put(argParameterKey, argParameterValue);
         //isUseRequestParameterKeyValue = true;
         return this;
     }
 
     protected CoreHTTPVolleyRequest withModel(Class<?> argResponseModelClass) {
+        methodName = "CoreHTTPVolleyRequest withModel(Class<?> argResponseModelClass)";
         responseModelClass = argResponseModelClass;
         return this;
     }
@@ -208,8 +218,8 @@ class CoreHTTPVolleyRequest {
         volleyRequest.add(stringPostRequest);
         volleyRequest.start();
     }*/
-
     protected void onStringRequest(HTTPVolleyRequest.HTTPMethod argRequestMethod) {
+        methodName = "void onStringRequest(HTTPVolleyRequest.HTTPMethod argRequestMethod)";
         //Request.Method.POST
         if (httpRequestURL == null) {
             onLogWrite("REQUEST_URL: NULL");
@@ -292,6 +302,7 @@ class CoreHTTPVolleyRequest {
             protected Map<String, String> getParams() {
                 if (urlRequestParameters == null) {
                     urlRequestParameters = new HashMap<>();
+                    return urlRequestParameters;
                 }
                 /*urlParameters.put(AppConstant.Server.FIELD_PARAMS.AUTH_KEY, "");
                 urlParameters.put(AppConstant.Server.FIELD_PARAMS.PACKAGE_NAME, context.getPackageName());
@@ -307,6 +318,7 @@ class CoreHTTPVolleyRequest {
     }
 
     protected void onJSONObjectRequest(JSONObject argJSONObject) {
+        methodName = "void onJSONObjectRequest(JSONObject argJSONObject)";
         /*Map<String, String> map = new HashMap<String, String>();
         map.put("param1", "example");
         JSONObject jsonObject = new JSONObject(map);
@@ -352,6 +364,7 @@ class CoreHTTPVolleyRequest {
             protected Map<String, String> getParams() {
                 if (urlRequestParameters == null) {
                     urlRequestParameters = new HashMap<>();
+                    return urlRequestParameters;
                 }
                 Map<String, String> treeURLParameters = new TreeMap<String, String>(urlRequestParameters);
                 onLogWrite("REQUEST_PARAMETERS: " + treeURLParameters.toString());
@@ -363,6 +376,7 @@ class CoreHTTPVolleyRequest {
     }
 
     protected void onJSONArrayRequest(JSONArray argJSONArray) {
+        methodName = "void onJSONArrayRequest(JSONArray argJSONArray)";
         if (httpRequestURL == null) {
             onLogWrite("REQUEST_URL: NULL");
             return;
@@ -405,6 +419,7 @@ class CoreHTTPVolleyRequest {
             protected Map<String, String> getParams() {
                 if (urlRequestParameters == null) {
                     urlRequestParameters = new HashMap<>();
+                    return urlRequestParameters;
                 }
                 Map<String, String> treeURLParameters = new TreeMap<String, String>(urlRequestParameters);
                 onLogWrite("REQUEST_PARAMETERS: " + treeURLParameters.toString());
@@ -416,6 +431,7 @@ class CoreHTTPVolleyRequest {
     }
 
     protected void onJSONObjectForceRequest(String argJSONString) {
+        methodName = "void onJSONObjectForceRequest(String argJSONString)";
         /*Map<String, String> map = new HashMap<String, String>();
         map.put("param1", "example");
         JSONObject jsonObject = new JSONObject(map);
@@ -474,6 +490,7 @@ class CoreHTTPVolleyRequest {
             protected Map<String, String> getParams() {
                 if (urlRequestParameters == null) {
                     urlRequestParameters = new HashMap<>();
+                    return urlRequestParameters;
                 }
                 Map<String, String> treeURLParameters = new TreeMap<String, String>(urlRequestParameters);
                 onLogWrite("REQUEST_PARAMETERS: " + treeURLParameters.toString());
@@ -485,6 +502,7 @@ class CoreHTTPVolleyRequest {
     }
 
     private void onVolleyResponseHandler(String argResponse) {
+        methodName = "void onVolleyResponseHandler(String argResponse)";
         try {
             byte[] byteArray = argResponse.toString().getBytes("ISO-8859-1");
             argResponse = new String(byteArray, "UTF-8");
@@ -509,6 +527,7 @@ class CoreHTTPVolleyRequest {
     }
 
     private void onVolleyErrorHandler(VolleyError argVolleyError) {
+        methodName = "void onVolleyErrorHandler(VolleyError argVolleyError)";
         //LogWriter.Log("(HTTPVolleyRequest) - onErrorResponse VolleyError " + argVolleyError.toString());
         //System.out.println("DEBUG_LOG_PRINT Error Response code: " + argVolleyError.networkResponse.statusCode);
         String errorMessage = "";
@@ -534,8 +553,9 @@ class CoreHTTPVolleyRequest {
         }
     }
 
-    protected void cancelAllRequests(String tag) {
-        getRequestQueue().cancelAll(tag);
+    protected void cancelAllRequests(String argTag) {
+        methodName = "void cancelAllRequests(String tag)";
+        getRequestQueue().cancelAll(argTag);
     }
 
     /*public interface EventListenerHandler {
@@ -546,6 +566,8 @@ class CoreHTTPVolleyRequest {
         public void onError(VolleyError argVolleyError, String argStatusCode, String argErrorMessage);
     }*/
     protected interface EventListenerHandler_NotUse {
+        String methodName = "interface EventListenerHandler_NotUse";
+
         public void onSuccess(String argResponseData);
 
         public void onSuccess(ArrayList<?> argModelDataList);
@@ -558,6 +580,7 @@ class CoreHTTPVolleyRequest {
     }
 
     private String getAppVersion(Context context) {
+        methodName = "String getAppVersion(Context context)";
         PackageManager manager = context.getPackageManager();
         try {
             //PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_META_DATA);
@@ -571,6 +594,7 @@ class CoreHTTPVolleyRequest {
     }
 
     private void onLogWrite(String argMessage) {
+        methodName = "void onLogWrite(String argMessage)";
         System.out.println("LOG_WRITER_CORE_HTTPVolleyRequest: " + argMessage);
     }
 

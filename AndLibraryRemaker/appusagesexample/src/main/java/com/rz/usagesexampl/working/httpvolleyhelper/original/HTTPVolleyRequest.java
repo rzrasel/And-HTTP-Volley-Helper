@@ -16,6 +16,7 @@ public class HTTPVolleyRequest {
     private String methodName = "methodName-var";
 
     public synchronized static HTTPVolleyRequest getInstance(Context argContext) {
+        String staticMethodName = "HTTPVolleyRequest getInstance(Context argContext)";
         if (instance == null) {
             instance = new HTTPVolleyRequest(argContext);
         }
@@ -23,65 +24,79 @@ public class HTTPVolleyRequest {
     }
 
     public HTTPVolleyRequest(Context argContext) {
+        methodName = "HTTPVolleyRequest(Context argContext)";
         coreHTTPVolleyRequest = new CoreHTTPVolleyRequest(argContext);
     }
 
     public HTTPVolleyRequest setEventListener(EventListenerHandler argEventListener) {
+        methodName = "HTTPVolleyRequest setEventListener(EventListenerHandler argEventListener)";
         coreHTTPVolleyRequest.setEventListener(argEventListener);
         return this;
     }
 
     public HTTPVolleyRequest setURL(String argHTTPRequestURL) {
+        methodName = "HTTPVolleyRequest setURL(String argHTTPRequestURL)";
         coreHTTPVolleyRequest.setURL(argHTTPRequestURL);
         return this;
     }
 
     public HTTPVolleyRequest withHeaderParameters(HashMap<String, String> argURLRequestHeaders) {
+        methodName = "HTTPVolleyRequest withHeaderParameters(HashMap<String, String> argURLRequestHeaders)";
         coreHTTPVolleyRequest.withHeaderParameters(argURLRequestHeaders);
         //isUseHeaderParameterKeyValue = false;
         return this;
     }
 
     public HTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters) {
+        methodName = "HTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters)";
         coreHTTPVolleyRequest.withURLParameters(argURLRequestParameters);
         //isUseRequestParameterKeyValue = false;
         return this;
     }
 
     public HTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue) {
+        methodName = "HTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue)";
         coreHTTPVolleyRequest.withHeaderParameters(argParameterKey, argParameterValue);
         //isUseHeaderParameterKeyValue = true;
         return this;
     }
 
     public HTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue) {
+        methodName = "HTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue)";
         coreHTTPVolleyRequest.withHeaderParameters(argParameterKey, argParameterValue);
         //isUseRequestParameterKeyValue = true;
         return this;
     }
 
     public HTTPVolleyRequest withModel(Class<?> argResponseModelClass) {
+        methodName = "HTTPVolleyRequest withModel(Class<?> argResponseModelClass)";
         coreHTTPVolleyRequest.withModel(argResponseModelClass);
         return this;
     }
 
-    public void onStringRequest(HTTPVolleyRequest.HTTPMethod argRequestMethod) {
+    public void onStringRequest(HTTPMethod argRequestMethod) {
+        methodName = "void onStringRequest(HTTPVolleyRequest.HTTPMethod argRequestMethod)";
         coreHTTPVolleyRequest.onStringRequest(argRequestMethod);
     }
 
     public void onJSONObjectRequest(JSONObject argJSONObject) {
+        methodName = "void onJSONObjectRequest(JSONObject argJSONObject)";
         coreHTTPVolleyRequest.onJSONObjectRequest(argJSONObject);
     }
 
     public void onJSONArrayRequest(JSONArray argJSONArray) {
+        methodName = "void onJSONArrayRequest(JSONArray argJSONArray)";
         coreHTTPVolleyRequest.onJSONArrayRequest(argJSONArray);
     }
 
     public void onJSONObjectForceRequest(String argJSONString) {
+        methodName = "void onJSONObjectForceRequest(String argJSONString)";
         coreHTTPVolleyRequest.onJSONObjectForceRequest(argJSONString);
     }
 
     public interface EventListenerHandler {
+        String interfaceMethodName = "interface EventListenerHandler";
+
         public void onSuccess(String argResponseData);
 
         public void onSuccess(ArrayList<?> argModelDataList);

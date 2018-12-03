@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.android.volley.VolleyError;
 import com.google.gson.annotations.SerializedName;
 import com.rz.usagesexampl.libs.FieldName;
-import com.rz.usagesexampl.working.httpvolleyhelper.original.HTTPVolleyRequest;
+import com.rz.usagesexampl.working.HTTPVolleyRequest;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

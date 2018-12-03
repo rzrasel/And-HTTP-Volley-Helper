@@ -1,14 +1,14 @@
-package com.rz.httpvolleyhelper;
+package com.rz.usagesexampl.working;
 
 import android.content.Context;
 
 import com.android.volley.VolleyError;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class HTTPVolleyRequest {
     private static HTTPVolleyRequest instance;
