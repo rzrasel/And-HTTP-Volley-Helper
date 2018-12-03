@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.android.volley.VolleyError;
-import com.rz.httpvolleyhelper.HTTPVolleyParser;
 import com.rz.httpvolleyhelper.HTTPVolleyRequest;
 
 import java.util.ArrayList;
@@ -22,7 +21,7 @@ public class ActHTTPVolleyHelper extends AppCompatActivity {
         setContentView(R.layout.act_httpvolley_helper);
         activity = this;
         context = this;
-        HTTPVolleyParser httpVolleyParser = new HTTPVolleyParser(context);
+        /*HTTPVolleyParser httpVolleyParser = new HTTPVolleyParser(context);
         HashMap<String, String> headerParams = new HashMap<>();
         headerParams.put("Authorization", "Token " + "ApiAuthToken");
         httpVolleyParser.withRUL("url")
@@ -50,6 +49,6 @@ public class ActHTTPVolleyHelper extends AppCompatActivity {
                         //
                     }
                 })
-                .onExecute(HTTPVolleyRequest.HTTPMethod.GET);
+                .onExecute(HTTPVolleyRequest.HTTPMethod.GET);*/
     }
 }

@@ -31,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HTTPVolleyRequest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HTTPVolleyRequest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/HTTPVolleyRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -43,15 +43,6 @@
                 <element signature="e#2180#2181#0" expanded="true" />
                 <element signature="e#2228#2229#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActSplash.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/ActSplash.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -2419,14 +2410,6 @@
             </path>
             <path>
               <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
-              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="usagesexampl" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="working" type="462c0819:PsiDirectoryNode" />
-              <item name="httpvolleyhelper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
@@ -2610,7 +2593,7 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" />
       <window_info anchor="right" id="Palette&#9;" order="0" />
       <window_info id="Image Layers" order="0" />
       <window_info id="Build Variants" order="1" side_tool="true" />
@@ -2619,7 +2602,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Logcat" visible="true" weight="0.32935154" />
+      <window_info anchor="bottom" id="Logcat" visible="true" weight="0.42320818" />
       <window_info id="Captures" order="6" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -2783,6 +2766,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/ActSplash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/HTTPVolleyRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -2794,13 +2784,6 @@
             <element signature="e#2180#2181#0" expanded="true" />
             <element signature="e#2228#2229#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/ActSplash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
         </state>
       </provider>
     </entry>
