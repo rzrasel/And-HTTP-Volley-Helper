@@ -9,7 +9,7 @@ import com.android.volley.VolleyError;
 import com.google.gson.annotations.SerializedName;
 //import com.rz.httpvolleyhelper.FieldName;
 //import com.rz.httpvolleyhelper.HTTPVolleyParser;
-import com.rz.httpvolleyhelper.HTTPVolleyRequest;
+import com.rz.httpvolleyhelper.HTTPVolleyHelper;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -105,6 +105,7 @@ public class ActSplash extends AppCompatActivity {
         activity = this;
         context = this;
         onDynamicMethodVar();
+        HTTPVolleyHelper httpVolleyHelper = new HTTPVolleyHelper(context);
         //onHTTPVolleyParser();
         //startActivity(new Intent(context, ActHTTPVolleyHelper.class));
         List<String> serializedNameList = getAllAnnotation(ModelHTTPVolley.class);
