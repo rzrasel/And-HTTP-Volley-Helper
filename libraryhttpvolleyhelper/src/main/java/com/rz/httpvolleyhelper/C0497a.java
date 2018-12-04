@@ -35,7 +35,7 @@ class C0497a {
     private static C0497a f1740b;
     private Context f1741a;
     private RequestQueue f1742c;
-    private HTTPVolleyRequest.EventListenerHandler f1743d;
+    private HTTPVolleyHelper.EventListenerHandler f1743d;
     private HashMap<String, String> f1744e;
     private HashMap<String, String> f1745f;
     private String f1746g;
@@ -59,7 +59,7 @@ class C0497a {
         return this.f1742c;
     }
 
-    protected C0497a m1937a(HTTPVolleyRequest.EventListenerHandler c0499a) {
+    protected C0497a m1937a(HTTPVolleyHelper.EventListenerHandler c0499a) {
         this.f1743d = c0499a;
         return this;
     }
@@ -94,7 +94,7 @@ class C0497a {
         return this;
     }
 
-    protected void m1942a(HTTPVolleyRequest.HTTPMethod argRequestMethod) {
+    protected void m1942a(HTTPVolleyHelper.HTTPMethod argRequestMethod) {
         if (this.f1746g == null) {
             m1936d("REQUEST_URL: NULL");
             return;

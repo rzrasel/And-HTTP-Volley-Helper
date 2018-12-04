@@ -33,11 +33,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-class CoreHTTPVolleyRequest {
+class CoreHTTPVolleyHelper {
     private Context context;
-    private static CoreHTTPVolleyRequest instance = null;
+    private static CoreHTTPVolleyHelper instance = null;
     private RequestQueue volleyRequest;
-    private HTTPVolleyRequest.EventListenerHandler eventListener;
+    private HTTPVolleyHelper.EventListenerHandler eventListener;
     private HashMap<String, String> urlRequestHeaders = null;
     private HashMap<String, String> urlRequestParameters = null;
     /*private TreeMap<String, String> urlRequestHeadersTree = null;
@@ -48,15 +48,15 @@ class CoreHTTPVolleyRequest {
     private boolean isUseRequestParameterKeyValue = false;*/
     private String methodName = "methodName-var";
 
-    protected synchronized static CoreHTTPVolleyRequest getInstance(Context argContext) {
+    protected synchronized static CoreHTTPVolleyHelper getInstance(Context argContext) {
         String staticMethodName = "CoreHTTPVolleyRequest getInstance(Context argContext)";
         if (instance == null) {
-            instance = new CoreHTTPVolleyRequest(argContext);
+            instance = new CoreHTTPVolleyHelper(argContext);
         }
         return instance;
     }
 
-    protected CoreHTTPVolleyRequest(Context argContext) {
+    protected CoreHTTPVolleyHelper(Context argContext) {
         methodName = "CoreHTTPVolleyRequest(Context argContext)";
         context = argContext;
         urlRequestHeaders = new HashMap<>();
@@ -84,47 +84,47 @@ class CoreHTTPVolleyRequest {
         return volleyRequest;
     }
 
-    protected CoreHTTPVolleyRequest setEventListener(HTTPVolleyRequest.EventListenerHandler argEventListener) {
+    protected CoreHTTPVolleyHelper setEventListener(HTTPVolleyHelper.EventListenerHandler argEventListener) {
         methodName = "CoreHTTPVolleyRequest setEventListener(HTTPVolleyRequest.EventListenerHandler argEventListener)";
         eventListener = argEventListener;
         return this;
     }
 
-    protected CoreHTTPVolleyRequest setURL(String argHTTPRequestURL) {
+    protected CoreHTTPVolleyHelper setURL(String argHTTPRequestURL) {
         methodName = "CoreHTTPVolleyRequest setURL(String argHTTPRequestURL)";
         httpRequestURL = argHTTPRequestURL;
         return this;
     }
 
-    protected CoreHTTPVolleyRequest withHeaderParameters(HashMap<String, String> argURLRequestHeaders) {
+    protected CoreHTTPVolleyHelper withHeaderParameters(HashMap<String, String> argURLRequestHeaders) {
         methodName = "CoreHTTPVolleyRequest withHeaderParameters(HashMap<String, String> argURLRequestHeaders)";
         urlRequestHeaders = argURLRequestHeaders;
         //isUseHeaderParameterKeyValue = false;
         return this;
     }
 
-    protected CoreHTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters) {
+    protected CoreHTTPVolleyHelper withURLParameters(HashMap<String, String> argURLRequestParameters) {
         methodName = "CoreHTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters)";
         urlRequestParameters = argURLRequestParameters;
         //isUseRequestParameterKeyValue = false;
         return this;
     }
 
-    protected CoreHTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue) {
+    protected CoreHTTPVolleyHelper withHeaderParameters(String argParameterKey, String argParameterValue) {
         methodName = "CoreHTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue)";
         urlRequestHeaders.put(argParameterKey, argParameterValue);
         //isUseHeaderParameterKeyValue = true;
         return this;
     }
 
-    protected CoreHTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue) {
+    protected CoreHTTPVolleyHelper withURLParameters(String argParameterKey, String argParameterValue) {
         methodName = "CoreHTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue)";
         urlRequestParameters.put(argParameterKey, argParameterValue);
         //isUseRequestParameterKeyValue = true;
         return this;
     }
 
-    protected CoreHTTPVolleyRequest withModel(Class<?> argResponseModelClass) {
+    protected CoreHTTPVolleyHelper withModel(Class<?> argResponseModelClass) {
         methodName = "CoreHTTPVolleyRequest withModel(Class<?> argResponseModelClass)";
         responseModelClass = argResponseModelClass;
         return this;
@@ -218,7 +218,7 @@ class CoreHTTPVolleyRequest {
         volleyRequest.add(stringPostRequest);
         volleyRequest.start();
     }*/
-    protected void onStringRequest(HTTPVolleyRequest.HTTPMethod argRequestMethod) {
+    protected void onStringRequest(HTTPVolleyHelper.HTTPMethod argRequestMethod) {
         methodName = "void onStringRequest(HTTPVolleyRequest.HTTPMethod argRequestMethod)";
         //Request.Method.POST
         if (httpRequestURL == null) {

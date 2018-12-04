@@ -10,53 +10,53 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class HTTPVolleyRequest {
-    private static HTTPVolleyRequest instance;
+public class HTTPVolleyHelper {
+    private static HTTPVolleyHelper instance;
     private C0497a f1755b;
 
-    public synchronized static HTTPVolleyRequest getInstance(Context argContext) {
+    public synchronized static HTTPVolleyHelper getInstance(Context argContext) {
         if (instance == null) {
-            instance = new HTTPVolleyRequest(argContext);
+            instance = new HTTPVolleyHelper(argContext);
         }
         return instance;
     }
 
-    public HTTPVolleyRequest(Context context) {
+    public HTTPVolleyHelper(Context context) {
         this.f1755b = null;
         this.f1755b = new C0497a(context);
     }
 
-    public HTTPVolleyRequest setEventListener(EventListenerHandler argEventListener) {
+    public HTTPVolleyHelper setEventListener(EventListenerHandler argEventListener) {
         this.f1755b.m1937a(argEventListener);
         return this;
     }
 
-    public HTTPVolleyRequest setURL(String argHTTPRequestURL) {
+    public HTTPVolleyHelper setURL(String argHTTPRequestURL) {
         this.f1755b.m1939a(argHTTPRequestURL);
         return this;
     }
 
-    public HTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue) {
+    public HTTPVolleyHelper withHeaderParameters(String argParameterKey, String argParameterValue) {
         this.f1755b.m1940a(argParameterKey, argParameterValue);
         return this;
     }
 
-    public HTTPVolleyRequest withHeaderParameters(HashMap<String, String> argURLRequestHeaders) {
+    public HTTPVolleyHelper withHeaderParameters(HashMap<String, String> argURLRequestHeaders) {
         this.f1755b.m1941a((HashMap) argURLRequestHeaders);
         return this;
     }
 
-    public HTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue) {
+    public HTTPVolleyHelper withURLParameters(String argParameterKey, String argParameterValue) {
         this.f1755b.m1944a(argParameterKey, argParameterValue);
         return this;
     }
 
-    public HTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters) {
+    public HTTPVolleyHelper withURLParameters(HashMap<String, String> argURLRequestParameters) {
         this.f1755b.m1945b((HashMap) argURLRequestParameters);
         return this;
     }
 
-    public HTTPVolleyRequest withModel(Class<?> argResponseModelClass) {
+    public HTTPVolleyHelper withModel(Class<?> argResponseModelClass) {
         this.f1755b.m1938a((Class) argResponseModelClass);
         return this;
     }

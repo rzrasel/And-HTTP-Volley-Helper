@@ -10,65 +10,65 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class HTTPVolleyRequest {
-    private static HTTPVolleyRequest instance = null;
-    private CoreHTTPVolleyRequest coreHTTPVolleyRequest = null;
+public class HTTPVolleyHelper {
+    private static HTTPVolleyHelper instance = null;
+    private CoreHTTPVolleyHelper coreHTTPVolleyRequest = null;
     private String methodName = "methodName-var";
 
-    public synchronized static HTTPVolleyRequest getInstance(Context argContext) {
+    public synchronized static HTTPVolleyHelper getInstance(Context argContext) {
         String staticMethodName = "HTTPVolleyRequest getInstance(Context argContext)";
         if (instance == null) {
-            instance = new HTTPVolleyRequest(argContext);
+            instance = new HTTPVolleyHelper(argContext);
         }
         return instance;
     }
 
-    public HTTPVolleyRequest(Context argContext) {
+    public HTTPVolleyHelper(Context argContext) {
         methodName = "HTTPVolleyRequest(Context argContext)";
-        coreHTTPVolleyRequest = new CoreHTTPVolleyRequest(argContext);
+        coreHTTPVolleyRequest = new CoreHTTPVolleyHelper(argContext);
     }
 
-    public HTTPVolleyRequest setEventListener(EventListenerHandler argEventListener) {
+    public HTTPVolleyHelper setEventListener(EventListenerHandler argEventListener) {
         methodName = "HTTPVolleyRequest setEventListener(EventListenerHandler argEventListener)";
         coreHTTPVolleyRequest.setEventListener(argEventListener);
         return this;
     }
 
-    public HTTPVolleyRequest setURL(String argHTTPRequestURL) {
+    public HTTPVolleyHelper setURL(String argHTTPRequestURL) {
         methodName = "HTTPVolleyRequest setURL(String argHTTPRequestURL)";
         coreHTTPVolleyRequest.setURL(argHTTPRequestURL);
         return this;
     }
 
-    public HTTPVolleyRequest withHeaderParameters(HashMap<String, String> argURLRequestHeaders) {
+    public HTTPVolleyHelper withHeaderParameters(HashMap<String, String> argURLRequestHeaders) {
         methodName = "HTTPVolleyRequest withHeaderParameters(HashMap<String, String> argURLRequestHeaders)";
         coreHTTPVolleyRequest.withHeaderParameters(argURLRequestHeaders);
         //isUseHeaderParameterKeyValue = false;
         return this;
     }
 
-    public HTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters) {
+    public HTTPVolleyHelper withURLParameters(HashMap<String, String> argURLRequestParameters) {
         methodName = "HTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters)";
         coreHTTPVolleyRequest.withURLParameters(argURLRequestParameters);
         //isUseRequestParameterKeyValue = false;
         return this;
     }
 
-    public HTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue) {
+    public HTTPVolleyHelper withHeaderParameters(String argParameterKey, String argParameterValue) {
         methodName = "HTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue)";
         coreHTTPVolleyRequest.withHeaderParameters(argParameterKey, argParameterValue);
         //isUseHeaderParameterKeyValue = true;
         return this;
     }
 
-    public HTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue) {
+    public HTTPVolleyHelper withURLParameters(String argParameterKey, String argParameterValue) {
         methodName = "HTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue)";
         coreHTTPVolleyRequest.withHeaderParameters(argParameterKey, argParameterValue);
         //isUseRequestParameterKeyValue = true;
         return this;
     }
 
-    public HTTPVolleyRequest withModel(Class<?> argResponseModelClass) {
+    public HTTPVolleyHelper withModel(Class<?> argResponseModelClass) {
         methodName = "HTTPVolleyRequest withModel(Class<?> argResponseModelClass)";
         coreHTTPVolleyRequest.withModel(argResponseModelClass);
         return this;

@@ -2345,12 +2345,13 @@
         <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/C0475a.java" />
         <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/C0458b.java" />
         <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/C0498b.java" />
-        <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/CoreHTTPVolleyRequest.java" />
         <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/C0497a.java" />
         <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/ActSplash.java" />
         <option value="$PROJECT_DIR$/gradle.properties" />
         <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/HTTPVolleyRequest.java" />
         <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/HTTPVolleyRequest.java" />
+        <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/CoreHTTPVolleyRequest.java" />
+        <option value="$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/HTTPVolleyHelper.java" />
       </list>
     </option>
   </component>
@@ -2365,9 +2366,50 @@
     </navigator>
     <panes>
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="usagesexampl" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="usagesexampl" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="working" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="usagesexampl" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="working" type="462c0819:PsiDirectoryNode" />
+              <item name="httpvolleyhelper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="usagesexampl" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="working" type="462c0819:PsiDirectoryNode" />
+              <item name="httpvolleyhelper" type="462c0819:PsiDirectoryNode" />
+              <item name="original" type="462c0819:PsiDirectoryNode" />
+            </path>
             <path>
               <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -2376,8 +2418,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2567,8 +2607,8 @@
       <window_info id="Captures" order="6" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24959612" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.32935154" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24959612" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32935154" />
       <window_info anchor="right" id="Android WiFi ADB" order="3" />
       <window_info anchor="right" id="Gradle" order="4" />
       <window_info anchor="right" id="Structure" order="2" side_tool="true" weight="0.24959612" />
@@ -2675,24 +2715,10 @@
     <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/C0453a.java" />
     <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/C0458b.java" />
     <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/C0475a.java" />
-    <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/HTTPVolleyParserHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.volley/volley/1.1.1/3fb00d0da53c4e9f35a519da6e22bc2de7463816/volley-1.1.1-sources.jar!/com/android/volley/Request.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="367" column="31" selection-start-line="367" selection-start-column="31" selection-end-line="367" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/CoreHTTPVolleyRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="313" column="10" lean-forward="true" selection-start-line="313" selection-start-column="10" selection-end-line="313" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -2747,8 +2773,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/HTTPVolleyRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="105" column="54" selection-start-line="105" selection-start-column="54" selection-end-line="105" selection-end-column="54" />
+        <state relative-caret-position="206">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/HTTPVolleyParserHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/CoreHTTPVolleyRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6403">
+          <caret line="126" column="34" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/CoreHTTPVolleyHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1539">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appusagesexample/src/main/java/com/rz/usagesexampl/working/httpvolleyhelper/original/HTTPVolleyHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="105" column="42" lean-forward="true" selection-start-line="105" selection-start-column="42" selection-end-line="105" selection-end-column="42" />
         </state>
       </provider>
     </entry>
