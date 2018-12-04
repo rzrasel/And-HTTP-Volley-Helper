@@ -1,7 +1,7 @@
 package com.rz.usagesexampl;
 
 import com.google.gson.annotations.SerializedName;
-import com.rz.httpvolleyhelper.FieldName;
+//import com.rz.httpvolleyhelper.FieldName;
 
 public class ModelHTTPVolley {
     @SerializedName("id")
@@ -10,7 +10,7 @@ public class ModelHTTPVolley {
     private String name;
     @SerializedName("bn_name")
     private String bnName;
-    @FieldName("my_name")
+    //@FieldName("my_name")
     private String myName;
     public String testVar = "Hi I am test var";
 

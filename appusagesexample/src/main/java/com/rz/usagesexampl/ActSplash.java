@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.android.volley.VolleyError;
 import com.google.gson.annotations.SerializedName;
-import com.rz.httpvolleyhelper.FieldName;
-import com.rz.httpvolleyhelper.HTTPVolleyParser;
+//import com.rz.httpvolleyhelper.FieldName;
+//import com.rz.httpvolleyhelper.HTTPVolleyParser;
 import com.rz.httpvolleyhelper.HTTPVolleyRequest;
 
 import java.lang.reflect.Field;
@@ -119,7 +119,7 @@ public class ActSplash extends AppCompatActivity {
         List<Field> fieldList = getAllFields(ModelHTTPVolley.class);
         //List<String> serializedNameList = new ArrayList<>();
 
-        for (Field field : fieldList) {
+        /*for (Field field : fieldList) {
             //System.out.println("FieldName Variable Name is : " + field.getName());
             FieldName annotation = field.getAnnotation(FieldName.class);
             if (annotation != null) {
@@ -129,11 +129,11 @@ public class ActSplash extends AppCompatActivity {
             } else {
                 //System.out.println("Annotation is null");
             }
-        }
+        }*/
     }
 
     public void onHTTPVolleyParser() {
-        HTTPVolleyParser httpVolleyParser = new HTTPVolleyParser(context);
+        /*HTTPVolleyParser httpVolleyParser = new HTTPVolleyParser(context);
         HashMap<String, String> headerParams = new HashMap<>();
         headerParams.put("Authorization", "Token " + "ApiAuthToken");
         httpVolleyParser.withRUL("url")
@@ -161,7 +161,7 @@ public class ActSplash extends AppCompatActivity {
                         //
                     }
                 })
-                .onExecute(HTTPVolleyRequest.HTTPMethod.GET);
+                .onExecute(HTTPVolleyRequest.HTTPMethod.GET);*/
     }
 
     private void onDynamicMethodVar() {

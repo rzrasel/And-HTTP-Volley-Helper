@@ -82,7 +82,7 @@ public class HTTPVolleyRequest {
 
         public void onSuccess(ArrayList<?> argModelDataList);
 
-        public void onError(VolleyError argError);
+        public void onError(VolleyError argVolleyError);
 
         public void onError(VolleyError argVolleyError, String argStatusCode, String argErrorMessage);
     }

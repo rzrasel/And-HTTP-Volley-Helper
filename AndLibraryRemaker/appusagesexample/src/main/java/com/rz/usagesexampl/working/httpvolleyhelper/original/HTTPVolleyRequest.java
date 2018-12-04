@@ -103,7 +103,7 @@ public class HTTPVolleyRequest {
         //public void onSuccess(ArrayList<Object> argModelDataList);
         //public void onSuccess(ArrayList<ModelUsual> argModelDataList);
 
-        public void onError(VolleyError argError);
+        public void onError(VolleyError argVolleyError);
 
         public void onError(VolleyError argVolleyError, String argStatusCode, String argErrorMessage);
     }
