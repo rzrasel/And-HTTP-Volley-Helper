@@ -103,13 +103,6 @@ class CoreHTTPVolleyHelper {
         return this;
     }
 
-    protected CoreHTTPVolleyHelper withURLParameters(HashMap<String, String> argURLRequestParameters) {
-        methodName = "CoreHTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters)";
-        urlRequestParameters = argURLRequestParameters;
-        //isUseRequestParameterKeyValue = false;
-        return this;
-    }
-
     protected CoreHTTPVolleyHelper withHeaderParameters(String argParameterKey, String argParameterValue) {
         methodName = "CoreHTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue)";
         urlRequestHeaders.put(argParameterKey, argParameterValue);
@@ -117,8 +110,15 @@ class CoreHTTPVolleyHelper {
         return this;
     }
 
-    protected CoreHTTPVolleyHelper withURLParameters(String argParameterKey, String argParameterValue) {
-        methodName = "CoreHTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue)";
+    protected CoreHTTPVolleyHelper withPostParameters(HashMap<String, String> argURLRequestParameters) {
+        methodName = "CoreHTTPVolleyRequest withPostParameters(HashMap<String, String> argURLRequestParameters)";
+        urlRequestParameters = argURLRequestParameters;
+        //isUseRequestParameterKeyValue = false;
+        return this;
+    }
+
+    protected CoreHTTPVolleyHelper withPostParameters(String argParameterKey, String argParameterValue) {
+        methodName = "CoreHTTPVolleyRequest withPostParameters(String argParameterKey, String argParameterValue)";
         urlRequestParameters.put(argParameterKey, argParameterValue);
         //isUseRequestParameterKeyValue = true;
         return this;
@@ -430,8 +430,8 @@ class CoreHTTPVolleyHelper {
         volleyRequest.start();
     }
 
-    protected void onJSONObjectForceRequest(String argJSONString) {
-        methodName = "void onJSONObjectForceRequest(String argJSONString)";
+    protected void onJSONObjectFormedRequest(String argJSONString) {
+        methodName = "void onJSONObjectFormedRequest(String argJSONString)";
         /*Map<String, String> map = new HashMap<String, String>();
         map.put("param1", "example");
         JSONObject jsonObject = new JSONObject(map);

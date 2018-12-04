@@ -46,12 +46,12 @@ public class HTTPVolleyHelper {
         return this;
     }
 
-    public HTTPVolleyHelper withURLParameters(String argParameterKey, String argParameterValue) {
+    public HTTPVolleyHelper withPostParameters(String argParameterKey, String argParameterValue) {
         this.f1755b.m1944a(argParameterKey, argParameterValue);
         return this;
     }
 
-    public HTTPVolleyHelper withURLParameters(HashMap<String, String> argURLRequestParameters) {
+    public HTTPVolleyHelper withPostParameters(HashMap<String, String> argURLRequestParameters) {
         this.f1755b.m1945b((HashMap) argURLRequestParameters);
         return this;
     }
@@ -73,7 +73,7 @@ public class HTTPVolleyHelper {
         this.f1755b.m1943a(argJSONArray);
     }
 
-    public void onJSONObjectForceRequest(String argJSONString) {
+    public void onJSONObjectFormedRequest(String argJSONString) {
         this.f1755b.m1946b(argJSONString);
     }
 

@@ -5,8 +5,7 @@ import android.content.Context;
 import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.rz.usagesexampl.working.httpvolleyhelper.original.HTTPVolleyRequest;
-
+import com.rz.usagesexampl.working.httpvolleyhelper.original.HTTPVolleyHelper;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,7 +13,7 @@ import java.util.HashMap;
 public class HTTPVolleyParser<T> {
     //@CodeMarker("Variable Declaration Start")
     private Context context;
-    private HTTPVolleyRequest httpVolleyRequest = null;
+    private HTTPVolleyHelper httpVolleyRequest = null;
     private String httpRequestURL;
     private EventListenerHandler eventListener;
     private HashMap<String, String> urlParameters = null;
@@ -28,7 +27,7 @@ public class HTTPVolleyParser<T> {
     public HTTPVolleyParser(Context argContext) {
         System.out.println("(HTTPVolleyParser): constructor ");
         context = argContext;
-        httpVolleyRequest = new HTTPVolleyRequest(context);
+        httpVolleyRequest = new HTTPVolleyHelper(context);
     }
 
     public HTTPVolleyParser setEventListener(EventListenerHandler argEventListener) {
@@ -65,7 +64,7 @@ public class HTTPVolleyParser<T> {
         }.getType();
     }*/
 
-    public void onExecute(HTTPVolleyRequest.HTTPMethod argHTTPMethod) {
+    public void onExecute(HTTPVolleyHelper.HTTPMethod argHTTPMethod) {
         /*HashMap<String, String> headerParams = new HashMap<>();
         headerParams.put("Authorization", "Token " + UserSession.getApiAuthToken());
         HTTPVolleyRequest.Method httpMethod = HTTPVolleyRequest.Method.GET;
@@ -86,7 +85,7 @@ public class HTTPVolleyParser<T> {
         httpVolleyRequest.setURL(httpRequestURL)
                 .withHeaderParameters(headerParams)
                 .withURLParameters(urlParameters)
-                .setEventListener(new HTTPVolleyRequest.EventListenerHandler() {
+                .setEventListener(new HTTPVolleyHelper.EventListenerHandler() {
                     @Override
                     public void onSuccess(String argResponse) {
                         System.out.println("DEBUG_LOG_PRINT (HTTPVolleyParser): Response " + argResponse);

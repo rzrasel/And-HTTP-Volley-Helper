@@ -47,13 +47,6 @@ public class HTTPVolleyHelper {
         return this;
     }
 
-    public HTTPVolleyHelper withURLParameters(HashMap<String, String> argURLRequestParameters) {
-        methodName = "HTTPVolleyRequest withURLParameters(HashMap<String, String> argURLRequestParameters)";
-        coreHTTPVolleyRequest.withURLParameters(argURLRequestParameters);
-        //isUseRequestParameterKeyValue = false;
-        return this;
-    }
-
     public HTTPVolleyHelper withHeaderParameters(String argParameterKey, String argParameterValue) {
         methodName = "HTTPVolleyRequest withHeaderParameters(String argParameterKey, String argParameterValue)";
         coreHTTPVolleyRequest.withHeaderParameters(argParameterKey, argParameterValue);
@@ -61,9 +54,16 @@ public class HTTPVolleyHelper {
         return this;
     }
 
-    public HTTPVolleyHelper withURLParameters(String argParameterKey, String argParameterValue) {
-        methodName = "HTTPVolleyRequest withURLParameters(String argParameterKey, String argParameterValue)";
-        coreHTTPVolleyRequest.withHeaderParameters(argParameterKey, argParameterValue);
+    public HTTPVolleyHelper withPostParameters(HashMap<String, String> argURLRequestParameters) {
+        methodName = "HTTPVolleyRequest withPostParameters(HashMap<String, String> argURLRequestParameters)";
+        coreHTTPVolleyRequest.withPostParameters(argURLRequestParameters);
+        //isUseRequestParameterKeyValue = false;
+        return this;
+    }
+
+    public HTTPVolleyHelper withPostParameters(String argParameterKey, String argParameterValue) {
+        methodName = "HTTPVolleyRequest withPostParameters(String argParameterKey, String argParameterValue)";
+        coreHTTPVolleyRequest.withPostParameters(argParameterKey, argParameterValue);
         //isUseRequestParameterKeyValue = true;
         return this;
     }
@@ -89,9 +89,9 @@ public class HTTPVolleyHelper {
         coreHTTPVolleyRequest.onJSONArrayRequest(argJSONArray);
     }
 
-    public void onJSONObjectForceRequest(String argJSONString) {
-        methodName = "void onJSONObjectForceRequest(String argJSONString)";
-        coreHTTPVolleyRequest.onJSONObjectForceRequest(argJSONString);
+    public void onJSONObjectFormedRequest(String argJSONString) {
+        methodName = "void onJSONObjectFormedRequest(String argJSONString)";
+        coreHTTPVolleyRequest.onJSONObjectFormedRequest(argJSONString);
     }
 
     public interface EventListenerHandler {
