@@ -62,3 +62,48 @@ Rz Rasel:And-HTTP-Volley-Helper developer$ gradlew install
 bash: gradlew: command not found
 Rz Rasel:And-HTTP-Volley-Helper developer$
 ./gradlew assembleDebug --scan
+
+>>How to Add Stacktrace or debug Option when Building Android Studio Project
+./gradlew assembleMyBuild --stacktrace
+
+```
+HTTPVolleyRequest httpVolleyRequestTemp = HTTPVolleyRequest.getInstance(context);
+HTTPVolleyRequest httpVolleyParser = new HTTPVolleyRequest(context);
+HashMap<String, String> headerParams = new HashMap<>();
+headerParams.put("Authorization", "Token " + "ApiAuthToken");
+httpVolleyParser.setURL("url")
+        .withModel(ModelHTTPVolley.class)
+        .withHeaderParameters(headerParams)
+        .withURLParameters(headerParams)
+        .withHeaderParameters("test", "tst")
+        .withURLParameters("TEST", "EAT")
+        .setEventListener(new HTTPVolleyRequest.EventListenerHandler() {
+            @Override
+            public void onSuccess(String argResponseData) {
+                //
+            }
+
+            @Override
+            public void onSuccess(ArrayList<?> argModelDataList) {
+                ArrayList<ModelHTTPVolley> modelDataList = (ArrayList<ModelHTTPVolley>) argModelDataList;
+                System.out.println("DEBUG_LOG_PRINT (ActDashboard): size " + modelDataList.size());
+            }
+
+            @Override
+            public void onError(VolleyError argError) {
+                //
+            }
+
+            @Override
+            public void onError(VolleyError argVolleyError, String argStatusCode, String argErrorMessage) {
+                //
+            }
+        })
+        .onStringRequest(HTTPVolleyRequest.HTTPMethod.GET);
+httpVolleyParser.setURL("url")
+        .onJSONArrayRequest(new JSONArray());
+httpVolleyParser.setURL("url")
+        .onJSONObjectRequest(new JSONObject());
+httpVolleyParser.setURL("url")
+        .onJSONObjectForceRequest("");
+```
