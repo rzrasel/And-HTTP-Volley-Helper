@@ -96,11 +96,11 @@ class C0497a {
 
     protected void m1942a(HTTPVolleyHelper.HTTPMethod argRequestMethod) {
         if (this.f1746g == null) {
-            m1936d("REQUEST_URL: NULL");
+            m1936d("REQUEST_URL (101): NULL");
             return;
         }
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("REQUEST_URL: ");
+        stringBuilder.append("REQUEST_URL (101): ");
         stringBuilder.append(this.f1746g);
         m1936d(stringBuilder.toString());
         StringRequest stringPostRequest = new StringRequest(argRequestMethod.getValue(), this.f1746g,
@@ -134,12 +134,12 @@ class C0497a {
             public Map<String, String> getHeaders() {
                 if (f1744e == null) {
                     f1744e = new HashMap<String, String>();
-                    return f1744e;
+                    //return f1744e;
                 }
-                f1744e.put("Content-Type", "application/json");
+                //f1744e.put("Content-Type", "application/json");
                 Map<String, String> treeMap = new TreeMap<String, String>(f1744e);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("REQUEST_HEADERS: ");
+                stringBuilder.append("REQUEST_HEADERS (101): ");
                 stringBuilder.append(treeMap.toString());
                 m1936d(stringBuilder.toString());
                 return treeMap;
@@ -149,11 +149,11 @@ class C0497a {
             protected Map<String, String> getParams() {
                 if (f1745f == null) {
                     f1745f = new HashMap<>();
-                    return f1745f;
+                    //return f1745f;
                 }
                 Map<String, String> treeMap = new TreeMap<String, String>(f1745f);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("REQUEST_PARAMETERS: ");
+                stringBuilder.append("REQUEST_PARAMETERS (101): ");
                 stringBuilder.append(treeMap.toString());
                 m1936d(stringBuilder.toString());
                 return treeMap;
@@ -165,15 +165,15 @@ class C0497a {
 
     protected void m1944a(JSONObject jSONObject) {
         if (this.f1746g == null) {
-            m1936d("REQUEST_URL: NULL");
+            m1936d("REQUEST_URL (102): NULL");
             return;
         }
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("REQUEST_URL: ");
+        stringBuilder.append("REQUEST_URL (102): ");
         stringBuilder.append(this.f1746g);
         m1936d(stringBuilder.toString());
         stringBuilder = new StringBuilder();
-        stringBuilder.append("DEBUG_LOG_PRINT (HTTPVolleyRequest): ");
+        stringBuilder.append("DEBUG_LOG_PRINT (HTTPVolleyHelper) (102): ");
         stringBuilder.append(jSONObject.toString());
         m1936d(stringBuilder.toString());
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(1, this.f1746g, jSONObject,
@@ -193,12 +193,12 @@ class C0497a {
             public Map<String, String> getHeaders() {
                 if (f1744e == null) {
                     f1744e = new HashMap<String, String>();
-                    return f1744e;
+                    //return f1744e;
                 }
-                f1744e.put("Content-Type", "application/json");
+                //f1744e.put("Content-Type", "application/json");
                 Map<String, String> treeMap = new TreeMap<String, String>(f1744e);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("REQUEST_HEADERS: ");
+                stringBuilder.append("REQUEST_HEADERS (102): ");
                 stringBuilder.append(treeMap.toString());
                 m1936d(stringBuilder.toString());
                 return treeMap;
@@ -208,11 +208,11 @@ class C0497a {
             protected Map<String, String> getParams() {
                 if (f1745f == null) {
                     f1745f = new HashMap<>();
-                    return f1745f;
+                    //return f1745f;
                 }
                 Map<String, String> treeMap = new TreeMap<String, String>(f1745f);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("REQUEST_PARAMETERS: ");
+                stringBuilder.append("REQUEST_PARAMETERS (102): ");
                 stringBuilder.append(treeMap.toString());
                 m1936d(stringBuilder.toString());
                 return treeMap;
@@ -224,15 +224,15 @@ class C0497a {
 
     protected void m1943a(JSONArray jSONArray) {
         if (this.f1746g == null) {
-            m1936d("REQUEST_URL: NULL");
+            m1936d("REQUEST_URL (103): NULL");
             return;
         }
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("REQUEST_URL: ");
+        stringBuilder.append("REQUEST_URL (103): ");
         stringBuilder.append(this.f1746g);
         m1936d(stringBuilder.toString());
         stringBuilder = new StringBuilder();
-        stringBuilder.append("DEBUG_LOG_PRINT (HTTPVolleyRequest): ");
+        stringBuilder.append("DEBUG_LOG_PRINT (HTTPVolleyRequest) (103): ");
         stringBuilder.append(jSONArray.toString());
         m1936d(stringBuilder.toString());
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(1, this.f1746g, jSONArray,
@@ -253,12 +253,12 @@ class C0497a {
             public Map<String, String> getHeaders() {
                 if (f1744e == null) {
                     f1744e = new HashMap<String, String>();
-                    return f1744e;
+                    //return f1744e;
                 }
-                f1744e.put("Content-Type", "application/json");
+                //f1744e.put("Content-Type", "application/json");
                 Map<String, String> treeMap = new TreeMap<String, String>(f1744e);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("REQUEST_HEADERS: ");
+                stringBuilder.append("REQUEST_HEADERS (103): ");
                 stringBuilder.append(treeMap.toString());
                 m1936d(stringBuilder.toString());
                 return treeMap;
@@ -268,11 +268,11 @@ class C0497a {
             protected Map<String, String> getParams() {
                 if (f1745f == null) {
                     f1745f = new HashMap<>();
-                    return f1745f;
+                    //return f1745f;
                 }
                 Map<String, String> treeMap = new TreeMap<String, String>(f1745f);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("REQUEST_PARAMETERS: ");
+                stringBuilder.append("REQUEST_PARAMETERS (103): ");
                 stringBuilder.append(treeMap.toString());
                 m1936d(stringBuilder.toString());
                 return treeMap;
@@ -284,16 +284,16 @@ class C0497a {
 
     protected void m1946b(String str) {
         if (this.f1746g == null) {
-            m1936d("REQUEST_URL: NULL");
+            m1936d("REQUEST_URL (104): NULL");
             return;
         }
         JSONObject jSONObject;
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("REQUEST_URL: ");
+        stringBuilder.append("REQUEST_URL (104): ");
         stringBuilder.append(this.f1746g);
         m1936d(stringBuilder.toString());
         stringBuilder = new StringBuilder();
-        stringBuilder.append("DEBUG_LOG_PRINT (HTTPVolleyRequest): ");
+        stringBuilder.append("DEBUG_LOG_PRINT (HTTPVolleyRequest) (104): ");
         stringBuilder.append(str);
         m1936d(stringBuilder.toString());
         try {
@@ -303,7 +303,7 @@ class C0497a {
             jSONObject = null;
         }
         if (jSONObject == null) {
-            m1936d("JSON is null from onJSONObjectForceRequest");
+            m1936d("JSON is null from onJSONObjectForceRequest (104)");
         }
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(1, this.f1746g, jSONObject,
                 new Response.Listener<JSONObject>() {
@@ -322,12 +322,12 @@ class C0497a {
             public Map<String, String> getHeaders() {
                 if (f1744e == null) {
                     f1744e = new HashMap<String, String>();
-                    return f1744e;
+                    //return f1744e;
                 }
-                f1744e.put("Content-Type", "application/json");
+                //f1744e.put("Content-Type", "application/json");
                 Map<String, String> treeMap = new TreeMap<String, String>(f1744e);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("REQUEST_HEADERS: ");
+                stringBuilder.append("REQUEST_HEADERS (104): ");
                 stringBuilder.append(treeMap.toString());
                 m1936d(stringBuilder.toString());
                 return treeMap;
@@ -337,11 +337,11 @@ class C0497a {
             protected Map<String, String> getParams() {
                 if (f1745f == null) {
                     f1745f = new HashMap<>();
-                    return f1745f;
+                    //return f1745f;
                 }
                 Map<String, String> treeMap = new TreeMap<String, String>(f1745f);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("REQUEST_PARAMETERS: ");
+                stringBuilder.append("REQUEST_PARAMETERS (104): ");
                 stringBuilder.append(treeMap.toString());
                 m1936d(stringBuilder.toString());
                 return treeMap;
