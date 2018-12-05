@@ -26,8 +26,8 @@ public class HTTPVolleyHelper {
         this.f1755b = new C0497a(context);
     }
 
-    public HTTPVolleyHelper setEventListener(EventListenerHandler argEventListener) {
-        this.f1755b.m1937a(argEventListener);
+    public HTTPVolleyHelper setEventListener(OnResponseListenerHandler argResponseListener) {
+        this.f1755b.m1937a(argResponseListener);
         return this;
     }
 
@@ -77,7 +77,7 @@ public class HTTPVolleyHelper {
         this.f1755b.m1946b(argJSONString);
     }
 
-    public interface EventListenerHandler {
+    public interface OnResponseListenerHandler {
         public void onSuccess(String argResponseData);
 
         public void onSuccess(ArrayList<?> argModelDataList);
