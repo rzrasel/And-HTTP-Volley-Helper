@@ -2367,10 +2367,32 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="usagesexampl" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appusagesexample" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="usagesexampl" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="working" type="462c0819:PsiDirectoryNode" />
+            </path>
             <path>
               <item name="AndLibraryRemaker" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -2380,7 +2402,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
