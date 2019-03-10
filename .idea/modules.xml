@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/And-HTTP-Volley-Helper.iml" filepath="$PROJECT_DIR$/And-HTTP-Volley-Helper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/And-Libs-HTTP-Volley-Helper.iml" filepath="$PROJECT_DIR$/And-Libs-HTTP-Volley-Helper.iml" />
       <module fileurl="file://$PROJECT_DIR$/appusagesexample/appusagesexample.iml" filepath="$PROJECT_DIR$/appusagesexample/appusagesexample.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraryhttpvolleyhelper/libraryhttpvolleyhelper.iml" filepath="$PROJECT_DIR$/libraryhttpvolleyhelper/libraryhttpvolleyhelper.iml" />
     </modules>
